@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .kasus-01 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100px;
+        }
+
+        .kasus-02, .kasus-03 {
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
+        }
+
+        .kasus-03{
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="kasus-01">
+        <label for="angka1">Masukkan angka pertama</label>
+        <input id="angka1" type="text">
+        <label for="angka2">Masukkan angka kedua</label>
+        <input id="angka2" type="text">
+        <button onclick="perbandingan()">Lihat hasil</button>
+
+        <div>
+            <p id="hasil"></p>
+        </div>
+    </div>
+
+    <div class="kasus-02">
+        <label for="nama">Masukkan Nama Siswa</label>
+        <input id="nama" type="text">
+        <label for="nilai">Masukkan nilai</label>
+        <input id="nilai" type="text">
+        <label for="jlhAbsen">Masukkan Jumlah Absen</label>
+        <input id="jlhAbsen" type="text">
+        <button onclick="cekStatus()">Cek status</button>
+        
+        <div>
+            <p id="status"></p>
+        </div>
+    </div>
+
+    <div class="kasus-03">
+        <label for="waktu">Masukkan Jumlah detik</label>
+        <input id="waktu" type="number">
+
+        <button onclick="konversi()">Konversi Nilai</button>
+        <div>
+            <p id="hasilConvert"></p>
+        </div>
+    </div>
+
+</body>
+<script>
+
+
+    function perbandingan() {
+        var angka1 = document.getElementById("angka1").value;
+        var angka2 = document.getElementById("angka2").value;
+
+        if (angka2 > angka1) {
+            console.log("true");
+            document.getElementById("hasil").innerHTML="true";
+        } else if (angka2 < angka1) {
+            console.log("false");
+            document.getElementById("hasil").innerHTML="false";
+        } else if (angka2 = angka1) {
+            console.log("-1");
+            document.getElementById("hasil").innerHTML="-1";
+        }
+    }
+
+    function cekStatus() {
+        var nama = document.getElementById("nama").value;
+        var nilai = document.getElementById("nilai").value;
+        var jlhAbsen = document.getElementById("jlhAbsen").value;
+        var status = document.getElementById("status");
+
+        if (nilai < 70 && jlhAbsen >= 5) {
+            status.innerHTML = nama + " Dinyatakan Tidak Lulus";
+        } else if (nilai >=70 && absen < 5) {
+            status.innerHTML = nama + " Dinyatakan Lulus";
+        }
+    }
+
+    function konversi() {
+        var waktu = document.getElementById("waktu").value;
+        var hasilConvert = document.getElementById("hasilConvert");
+        var jam, menit, detik;
+        
+        jam = Math.floor(waktu/3600);
+        menit =Math.floor((waktu % 3600)/60);
+        detik = (waktu % 3600) % 60;
+
+        if (detik == 60 && menit == 0) {
+            menit = 1;
+            detik = 0;
+        } else if (detik == 60 && menit != 0) {
+            menit += 1;
+            detik = 0;
+        }
+
+        if (menit == 60 && jam == 0 ) {
+            jam = 1;
+            menit = 0;
+        } else if (menit == 60 && jam != 0) {
+            jam += 1;
+            menit = 0;
+        }
+
+        hasilConvert.innerHTML = "Hasil konversi nilai adalah\n" + jam + " Jam " + menit + " menit " + detik + " detik";    
+    }
+
+</script>
+
+</html>
