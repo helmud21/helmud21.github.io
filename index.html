@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Portfolio</title>
 
     <link rel="stylesheet" href="src/style.css">
 </head>
+
 <body>
     <div class="header">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="#about-wrapper">About Me</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact-wrapper">Contact</a></li>
         </ul>
     </div>
 
@@ -29,7 +31,8 @@
     </div>
 
     <div id="about-wrapper" class="about-wrapper">
-        <p><u>About Me</u></p>
+        <p>About Me</p>
+        <hr>
         <div class="about">
             <div class="photo-profile">
                 <img src="src/gambar/helmud_putih.png" alt="Photo Profile">
@@ -37,6 +40,7 @@
             <div class="biodata">
                 <ul>
                     <h2><u>Data Diri</u></h2>
+                    <br>
                     <li>Name :</li>
                     <li>Helmud Panggabean</li>
                     <br>
@@ -58,12 +62,40 @@
         </div>
     </div>
 
-    <div class="contact-wrapper">
-        
+    <div class="contact-wrapper" id="contact-wrapper">
+        <div class="contact-title">
+            <p class="my-contact">My Contact</p>
+            <hr>
+            <p class="get-my-contact">If You Want to Know My Contact Please Click on the Icon</p>
+        </div>
+
+        <div class="contact">
+            <div class="social-media">
+                <img id ="1" src="src/gambar/whatsapp.png" alt="">
+            </div>
+            <div class="social-media">
+                <img id ="2" src="src/gambar/gmail.png" alt="">
+            </div>
+            <div class="social-media">
+                <img id ="3" src="src/gambar/linkedin.png" alt="">
+            </div>
+            <div class="social-media">
+                <img id ="4" src="src/gambar/instagram.png" alt="">
+            </div>
+            <div class="social-media">
+                <img id ="5" src="src/gambar/facebook.png" alt="">
+            </div>
+        </div>
+
+        <div class="contact-value-wrapper">
+            <p id="contactValue" class="contact-value"></p>
+        </div>
     </div>
 
     <div class="footer">
-
+        <p>&#169; 2023 Admin Dashboard. All rights reserved.</p>
     </div>
 </body>
+
+<script src="src/script.js"></script>
 </html>

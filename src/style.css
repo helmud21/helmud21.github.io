@@ -3,6 +3,27 @@
     font-family: lobster;
 }
 
+.contact-wrapper .contact-title .my-contact, .get-my-contact {
+    font-size: 36px;
+    font-weight: bolder;
+    font-family: lobster;
+}
+
+.about-wrapper p {
+    font-size: 36px;
+    font-weight: bolder;
+    font-family: lobster;
+}
+
+hr {
+    height: 5px;
+    color: black;
+    background-color: black;
+    border-radius: 5px;
+    width: 200px;
+    margin-top: 5px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -76,16 +97,11 @@
     background-color: rgb(212, 214, 214);
 }
 
-.about-wrapper p {
-    font-size: 36px;
-    font-weight: bolder;
-}
-
 .about {
     display: flex;
     justify-content: space-around;
     margin-top: 50px auto;
-    width: 60%;
+    width: 70%;
     border: solid 2px white;
     border-radius: 10px;
     background-color: rgb(33, 33, 33);
@@ -100,7 +116,7 @@
     text-align: left;
     width: 100%;
     /* border-left: solid 3px white; */
-    padding: 20px 20px 20px 50px;
+    padding: 20px 20px 20px 100px;
 }
 
 .biodata ul li{
@@ -121,11 +137,43 @@
     border-radius: 50%;
     width: 300px;
     height: 350px;
-    margin: 0 auto;
+    margin: 0 40px;
 }
 
+.contact-wrapper {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.contact-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.contact {
+    display: flex;
+    margin-top: 50px;
+}
+
+.social-media {
+    margin: 20px;
+}
+
+.social-media img{
+    width: 200px;
+    height: 200px;
+}
+
+.contact-value-wrapper {
+    margin-top: 30px;
+}
+
+.get-my-contact {
+    margin-top: 30px;
+}
 
 .footer {
     width: 100%;
@@ -133,5 +181,10 @@
     background-color: rgb(33, 33, 33);
     box-shadow: 0 5px 10px rgb(256, 256, 256, 0.5);
     line-height: 40px;
-    margin-top: 100px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
 }
