@@ -8,7 +8,7 @@ const buttonPressed = e => {
     } else if (id == 2) {
         contactValue.innerHTML = `<h1>helmudpgbn@gmail.com</h1>`;
     } else if (id == 3) {
-        contactValue.innerHTML = `<h1>Maaf saya belum memiliki akun pada media sosial ini</h1>`;
+        contactValue.innerHTML = `<h1>Helmud Panggabean</h1>`;
     } else if (id == 4) {
         contactValue.innerHTML = `<h1>helmudpgbn / Helmud Panggabean</h1>`;
     } else if (id == 5) {
