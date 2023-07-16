@@ -2,6 +2,7 @@ var images = document.getElementsByTagName("img");
 var contactValue = document.getElementById("contactValue");
 
 const buttonPressed = e => { 
+    contactValue.style.cssText = 'text-align: center;'
     var id = e.target.id;
     if (id == 1) {
         contactValue.innerHTML = `<h1>0852-6772-7717</h1>`;
